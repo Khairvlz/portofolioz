@@ -1,8 +1,8 @@
 var peran = ["Siswa Jurusan Teknik Komputer Dan Jaringan ", "Suka belajar hal baru"];
 
 var elKetik = document.getElementById("ketik");
-var iPeran = 0;   // peran ke berapa
-var iHuruf = 0;   // huruf ke berapa
+var iPeran = 0; 
+var iHuruf = 0; 
 var hapus = false;
 
 function ketik() {
@@ -17,7 +17,8 @@ function ketik() {
   var jeda = hapus ? 40 : 90;
   if (!hapus && iHuruf === kata.length) {
     hapus = true;
-    jeda = 1500;            // tunggu sebentar sebelum dihapus
+    jeda = 1500;
+    
   } else if (hapus && iHuruf === 0) {
     hapus = false;
     iPeran = (iPeran + 1) % peran.length;
@@ -65,7 +66,6 @@ window.addEventListener("scroll", function () {
   var tinggi = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.width = (window.scrollY / tinggi * 100) + "%";
 
-  // cari section yang lagi kelihatan
   var yangAktif = bagian[0].id;
   for (var i = 0; i < bagian.length; i++) {
     if (bagian[i].getBoundingClientRect().top < window.innerHeight * 0.4) {

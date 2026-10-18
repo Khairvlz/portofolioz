@@ -1,93 +1,125 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khairul Azam</title>
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Zilla Slab', serif;
-            background-color: white;
-        }
-    
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 60px 30px;
-        }
-
-        .foto {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 2px dashed #ccc;
-            padding: 6px;
-            margin-bottom: 30px;
-        }
-
-        .foto img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 300;
-            color: #777;
-            line-height: 1.5;
-            margin-bottom: 40px;
-        }
-
-        h1 b {
-            font-weight: 600;
-            color: #444;
-        }
-
-        .tombol {
-            display: inline-block;
-            padding: 22px 36px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-size: 20px;
-            margin-right: 15px;
-            margin-bottom: 15px;
-        }
-
-        .tombol:hover {
-            opacity: 0.8;
-        }
-
-        .instagram {
-            background-color: #eddcf8;
-            color: #9b6bc7;
-        }
-
-        .kontak {
-            background-color: #fde8d4;
-            color: #e8913f;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 30px; }
-            .tombol { padding: 16px 26px; font-size: 17px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khairul A</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="foto">
-            <img src="foto.jpeg" alt="foto">
-        </div>
-
-        <h1>Hi, Saya <b>M.Khairul Azam</b>. Saya adalah seorang siswa SMK 3 Perguruan "Cikini"</h1>
-
-        <a class="tombol instagram" href="https://www.instagram.com/k4zrvl" target="_blank">Instagram</a>
-        <a class="tombol kontak" href="mailto:mhmmdzm28@gmail.com">Contact</a>
+  <div class="progress" id="progress"></div>
+  <div class="cahaya" id="cahaya"></div>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <header class="atas">
+    <a class="logo" href="#berand">Azam.</a>
+    <nav id="menu">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="kanan">
+      <button class="tombol-tema" id="tombolTema" aria-label="Ganti tema">Terang</button>
+      <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu">Menu</button>
     </div>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero">
+      <div class="hero-teks">
+        <p class="sapa">Halo, nama saya</p>
+        <h1>M. Khairul A</h1>
+        <p class="ketik">Saya <span id="ketik"></span><span class="kursor">|</span></p>
+        <p class="singkat">Saya Antusias dengan perkembangan teknologi dan 
+          selalu ingin belajar hal baru, khususnya di bidang IT Support dan desain visual.</p>
+        <div class="tombol-baris">
+          <a class="tombol" href="#hobby">Kenali Saya</a>
+          <a class="tombol tombol-polos" href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+      <div class="foto-bungkus" id="fotoBungkus">
+        <div class="foto">
+          <img src="foto.jpeg" alt="Foto Gue">
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang" class="muncul">
+      <h2>Tentang saya</h2>
+      <p>Siswa Teknik Komputer & Jaringan (TKJ) yang fokus di bidang IT Support, hardware troubleshooting, desain grafis, serta kepemimpinan organisasi.</p>
+      <p>Saya siswa SMK jurusan Teknik Komputer dan Jaringan (TKJ) 
+        dengan ketertarikan besar pada perakitan dan troubleshooting 
+        hardware PC maupun HP. Selain teknis IT, saya juga menyukai dunia 
+        seni visual dan desain grafis—mulai dari eksperimen karya
+        graffiti, pembuatan logo, hingga desain poster.
+        Di luar kegiatan belajar, saya aktif di OSIS sebagai Ketua Sekbid
+        Bela Negara. Melalui peran ini, saya mengasah kemampuan
+        kepemimpinan, manajemen tim, dan eksekusi acara sekolah,
+        sekaligus bertanggung jawab atas kebutuhan visual dan editing
+        media untuk program kerja divisi kami.</p>
+    </section>
+
+    <section id="hobby" class="muncul">
+      <h2>Hobby Saya</h2>
+      <ul class="daftar-hoby">
+        <li data-level="85"><div class="skill-atas"><strong>Main Game</strong><span>85%</span></div><div class="bar"><i></i></div></li>
+        <li data-level="65"><div class="skill-atas"><strong>Ngoding</strong><span>65%</span></div><div class="bar"><i></i></div></li>
+        <li data-level="70"><div class="skill-atas"><strong>Desain</strong><span>70%</span></div><div class="bar"><i></i></div></li>
+        <li data-level="90"><div class="skill-atas"><strong>Mendengarkan Musik</strong><span>90%</span></div><div class="bar"><i></i></div></li>
+      </ul>
+    </section>
+
+    <section id="pengalaman" class="muncul">
+      <h2>pengalaman</h2>
+      <a class="pengalaman" href="#">
+        <div>
+          <h3>Praktik Kerja Lapangan (PKL)</h3>
+          <p>Bertanggung jawab atas pemeliharaan sistem, perbaikan
+            hardware/software, serta penyiapan infrastruktur IT/AV
+            untuk kuliah dan acara kampus Universitas Indonesia. Saya juga bekerjasama dengan tim
+            IT UI dalam menjaga stabilitas jaringan dan menyelesaikan kendala teknis harian.</p>
+        </div>
+        <span class="✧">✧</span>
+      </a>
+      <a class="pengalaman" href="#">
+        <div>
+          <h3>Organisasi </h3>
+          <p>Memimpin divisi Ketua Sekbid Bela Negara OSIS, mengatur
+            penugasan anggota lapangan, serta pelaksanaan upacara bendera
+            rutin. Selain itu, saya mengikuti koordinasi eksekusi acara-acara
+            besar sekolah agar berjalan lancar.</p>
+        </div>
+        <span class="lightning">&#x26A1;</span>
+      </a>
+      <a class="pengalaman" href="#">
+        <div>
+          <h3>Desain Grafis</h3>
+          <p>Merancang berbagai aset visual seperti poster, logo, dan konten
+            media untuk mendukung publikasi program kerja OSIS. Saya juga
+            aktif mengembangkan keterampilan desain digital secara mandiri.</p>
+        </div>
+        <span class="DIAMOND">&diams;</span>
+      </a>
+    </section>
+    <section id="kontak" class="muncul">
+      <h2>Kontak</h2>
+      <p>Hubungi saya lewat:</p>
+      <ul class="daftar-kontak">
+        <li><a href="mailto:safapelukdiri@gmail.com">safapelukdiri@gmail.com</a></li>
+        <li><a href="https://instagram.com/k4zrvl" target="_blank">Instagram</a></li>
+        <li><a href="https://github.com/Khairvlz" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="tahun"></span> Nandaru W.D.</p>
+  </footer>
+  <script src="main.js"></script>
 </body>
 </html>
